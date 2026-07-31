@@ -480,3 +480,4 @@ positions/
 data/
 *.whl
 session/
+*.out
