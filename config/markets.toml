@@ -8,3 +8,8 @@ enabled = true
 slug    = "will-alexandru-nazare-be-the-next-prime-minister-of-romania"
 profile = "romania-pm"
 enabled = true
+
+[[markets]]
+slug    = "will-donavan-mckinney-win-the-mi-13-democratic-primary-by-at-least-16-20260727153231675"
+profile = "political-hot"
+enabled = true

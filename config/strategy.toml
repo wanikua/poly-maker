@@ -1,4 +1,63 @@
-# Strategy profiles. `newsom-mm` is tuned for the Gavin Newsom 2028 Dem-nomination
+# Strategy profiles.
+#
+# `political-longdated` / `political-hot` are the general-purpose starting
+# points (the CLI's markets-add defaults to political-longdated). The
+# market-specific profiles below them show how to tune for one book.
+
+# political-longdated: quiet, far-from-resolution markets farmed for rewards.
+# Conservative size, sticky quotes (hold queue position), damped regime.
+[profiles.political-longdated]
+gamma               = 0.6
+delta_min_ticks     = 2
+c_vol               = 1.5
+c_tox               = 3.0
+base_size_usdc      = 50.0
+q_max_usdc          = 200.0
+q_soft_frac         = 0.6
+layers              = 2
+reward_size_mult    = 1.0
+layer_step_ticks    = 2
+reprice_ticks       = 2
+resize_frac         = 0.2
+min_edge_ticks      = 1
+event_cooloff_s     = 60
+event_jump_ticks    = 6
+event_sweep_mult    = 5.0
+event_sweep_frac    = 0.9
+trend_flow_z        = 2.0
+trend_vol_ratio     = 3.0
+end_date_taper_days = 7
+reduce_only_hours   = 24
+halt_before_hours   = 2
+
+# political-hot: active, news-driven markets. Wider spreads, half the size,
+# hair-trigger regime — survival over reward farming.
+[profiles.political-hot]
+gamma               = 0.8
+delta_min_ticks     = 3
+c_vol               = 2.0
+c_tox               = 4.0
+base_size_usdc      = 25.0
+q_max_usdc          = 100.0
+q_soft_frac         = 0.5
+layers              = 1
+reward_size_mult    = 1.0
+layer_step_ticks    = 2
+reprice_ticks       = 1
+resize_frac         = 0.15
+min_edge_ticks      = 1
+event_cooloff_s     = 120
+event_jump_ticks    = 4
+event_sweep_mult    = 3.0
+event_sweep_frac    = 0.7
+trend_flow_z        = 1.5
+trend_vol_ratio     = 2.0
+end_date_taper_days = 7
+reduce_only_hours   = 24
+halt_before_hours   = 2
+
+
+# `newsom-mm` is tuned for the Gavin Newsom 2028 Dem-nomination
 # market from a live microstructure sample (2026-07-06): price ~0.195, tick 0.001,
 # 2-tick spread, thin touch (~$20-250), VERY quiet tape (~0.1 trades/min),
 # rewards: min 100 shares/order, 5.5c band, ~$52/day rate, 25% maker-rebate pool.

@@ -5,6 +5,7 @@ credentials.json
 */credentials.json
 .env
 .env.*
+!.env.example
 positions/
 
 # Byte-compiled / optimized / DLL files
@@ -479,3 +480,4 @@ positions/
 data/
 *.whl
 session/
+*.out
