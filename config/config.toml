@@ -14,7 +14,7 @@ chain_id = 137
 # address (the funder that holds your pUSD), NOT your signing EOA and NOT the
 # deployer/factory. Known SDK auth bugs live here (see the README) — `polymaker
 # doctor` / `livetest` will tell you if you picked the wrong type.
-signature_type = 0
+signature_type = 3
 clob_host = "https://clob.polymarket.com"
 gamma_host = "https://gamma-api.polymarket.com"
 data_api_host = "https://data-api.polymarket.com"
