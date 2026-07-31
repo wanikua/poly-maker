@@ -13,16 +13,3 @@ enabled = true
 slug    = "will-donavan-mckinney-win-the-mi-13-democratic-primary-by-at-least-16-20260727153231675"
 profile = "political-hot"
 enabled = true
-
-# Moonshot best-Chinese-AI-model (ends 2026-08-31). Requested by operator.
-# Thin book (~$2.3k liquidity), wide 3.8c spread, tiny $4/day reward pool,
-# news-gap risk on model releases -> minimum size, wide quotes, sticky orders.
-[[markets]]
-slug         = "will-moonshot-have-the-best-chinese-ai-model-at-the-end-of-august-2026-20260717004241594"
-condition_id = "0xfc75b689cb70c00a2f82b17d74909f4feef61f8e40eaf8855478a9cb036829be"
-profile      = "political-hot"
-enabled      = true
-base_size_usdc  = 15.0
-q_max_usdc      = 30.0
-delta_min_ticks = 15
-reprice_ticks   = 5
